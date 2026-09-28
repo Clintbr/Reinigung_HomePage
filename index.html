@@ -1,10 +1,648 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOVIS Gebäudereinigung | Professionelle Reinigungsdienste</title>
+    <meta name="description" content="CLOVIS Gebäudereinigung – Ihr verlässlicher Partner für Gebäudereinigung, Büroreinigung, Fensterreinigung, Grundreinigung und Hausmeisterservice.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container header-top-inner">
+            <div class="top-contact-list">
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+49 (0) 30 12345678</span>
+                </div>
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>kontakt@clovis-reinigung.de</span>
+                </div>
+            </div>
+            <div>
+                <span>Mo – Sa: 07:00 – 19:00 Uhr | Notdienst auf Anfrage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar" aria-label="Hauptnavigation">
+                <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                    <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Startseite</a>
+                    <a href="dienste.html" class="nav-link">Unsere Dienste</a>
+                    <a href="galerie.html" class="nav-link">Galerie</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="#anfrage" class="btn btn-primary btn-sm">Angebot anfordern</a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Menü öffnen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-backdrop"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobiles Menü">
+        <div class="drawer-header">
+            <div class="logo">
+                <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+            </div>
+            <button class="drawer-close" style="background:none;border:none;cursor:pointer;padding:0.5rem;" aria-label="Menü schließen">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html" class="active">Startseite</a>
+            <a href="dienste.html">Unsere Dienste</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="drawer-footer">
+            <a href="#anfrage" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="document.querySelector('.drawer-close').click()">Angebot anfordern</a>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Tel: +49 (0) 30 12345678<br>kontakt@clovis-reinigung.de</p>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-accent"></div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            Ihr Premium Partner für Sauberkeit
+                        </div>
+                        <h1 class="hero-title">
+                            Professionelle Gebäudereinigung mit <span class="highlight">höchster Präzision</span>.
+                        </h1>
+                        <div class="hero-actions">
+                            <a href="#anfrage" class="btn btn-primary btn-lg">Kostenloses Angebot anfragen</a>
+                            <a href="dienste.html" class="btn btn-secondary btn-lg">Alle Dienste ansehen</a>
+                        </div>
+                        <div class="hero-metrics">
+                            <div class="metric-item">
+                                <div class="metric-number">99<span>%</span></div>
+                                <div class="metric-label">Kundenzufriedenheit</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number">5<span>+</span></div>
+                                <div class="metric-label">Spezialisierte Dienste</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number">24<span>h</span></div>
+                                <div class="metric-label">Reaktionsgarantie</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-card-main">
+                            <div class="hero-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Gebäudereinigung Team im Einsatz">
+                            </div>
+                        </div>
+                        <div class="hero-floating-card">
+                            <div class="floating-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div class="floating-text">
+                                <h4>Zufriedenheit garantiert</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Features Bar -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h4>Pünktlich & Zuverlässig</h4>
+                            <p>Feste Einsatzpläne & Termintreue</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h4>Geschultes Personal</h4>
+                            <p>Festangestellte Reinigungskräfte</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Faire Preise</h4>
+                            <p>Transparente Angebote ohne Aufpreis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section section-spacing" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        Leistungsspektrum
+                    </div>
+                    <h2>Unsere Reinigungsdienste</h2>
+                </div>
+
+                <div class="carousel-3d-wrapper" id="services-carousel" tabindex="0" aria-label="3D Karussell unserer Dienstleistungen">
+                    <!-- Switch Navigation Buttons Left / Right -->
+                    <button class="carousel-btn carousel-btn-prev" aria-label="Vorherige Dienstleistung" title="Vorherige Dienstleistung">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" aria-label="Nächste Dienstleistung" title="Nächste Dienstleistung">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+
+                    <!-- 3D Stage & Track -->
+                    <div class="carousel-3d-stage">
+                        <div class="carousel-3d-track">
+                            <!-- Service 1: Gebäudereinigung -->
+                            <div class="service-card" data-index="0">
+                                <div class="service-card-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
+                                </div>
+                                <h3>Gebäudereinigung</h3>
+                                <div class="service-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Gebäudereinigung Treppenhaus und Eingang">
+                                </div>
+                                <ul class="service-card-features">
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Treppenhaus- & Flurreinigung</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Eingangsbereiche & Foyers</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Regelmäßige Turnuspflege</li>
+                                </ul>
+                                <a href="dienste.html#gebaeudereinigung" class="service-card-link">
+                                    Mehr erfahren
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
+
+                            <!-- Service 2: Fensterreinigung -->
+                            <div class="service-card" data-index="1">
+                                <div class="service-card-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+                                </div>
+                                <h3>Fensterreinigung</h3>
+                                <div class="service-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Fensterreinigung und Glasfassaden">
+                                </div>
+                                <ul class="service-card-features">
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Glas-, Rahmen- & Falzreinigung</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Schaufenster & Glasfassaden</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Rückstandslose Politur</li>
+                                </ul>
+                                <a href="dienste.html#fensterreinigung" class="service-card-link">
+                                    Mehr erfahren
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
+
+                            <!-- Service 3: Büroreinigung -->
+                            <div class="service-card" data-index="2">
+                                <div class="service-card-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                                </div>
+                                <h3>Büroreinigung</h3>
+                                <div class="service-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Büroreinigung und Arbeitsplatzhygiene">
+                                </div>
+                                <ul class="service-card-features">
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Schreibtische, Monitore & Tastaturen</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Teeküchen- & Sanitärhygiene</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Flexible Reinigungszeiten</li>
+                                </ul>
+                                <a href="dienste.html#bueroreinigung" class="service-card-link">
+                                    Mehr erfahren
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
+
+                            <!-- Service 4: Grundreinigung -->
+                            <div class="service-card" data-index="3">
+                                <div class="service-card-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                                </div>
+                                <h3>Grundreinigung</h3>
+                                <div class="service-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80" alt="Grundreinigung und Bodenversiegelung">
+                                </div>
+                                <ul class="service-card-features">
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Entfernung hartnäckiger Verschmutzungen</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Bodenversiegelung & Einpflege</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Bauend- & Übergabereinigung</li>
+                                </ul>
+                                <a href="dienste.html#grundreinigung" class="service-card-link">
+                                    Mehr erfahren
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
+
+                            <!-- Service 5: Hausmeisterservice -->
+                            <div class="service-card" data-index="4">
+                                <div class="service-card-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                                <h3>Hausmeisterservice</h3>
+                                <div class="service-card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Hausmeisterservice und Liegenschaftspflege">
+                                </div>
+                                <ul class="service-card-features">
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Technische Objektüberwachung</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Mülltonnenbereitstellung</li>
+                                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Garten- & Außenanlagenpflege</li>
+                                </ul>
+                                <a href="dienste.html#hausmeisterservice" class="service-card-link">
+                                    Mehr erfahren
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Indicators & Controls -->
+                    <div class="carousel-controls">
+                        <div class="carousel-dots">
+                            <button class="carousel-dot active" data-index="0" aria-label="Dienst 1: Gebäudereinigung"></button>
+                            <button class="carousel-dot" data-index="1" aria-label="Dienst 2: Fensterreinigung"></button>
+                            <button class="carousel-dot" data-index="2" aria-label="Dienst 3: Büroreinigung"></button>
+                            <button class="carousel-dot" data-index="3" aria-label="Dienst 4: Grundreinigung"></button>
+                            <button class="carousel-dot" data-index="4" aria-label="Dienst 5: Hausmeisterservice"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section – Infinite Marquee -->
+        <section class="testimonials-section section-spacing">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        Kundenstimmen
+                    </div>
+                    <h2>Was unsere Kunden sagen</h2>
+                    <p>Vertrauen und erstklassige Arbeitsqualität im täglichen Einsatz.</p>
+                </div>
+            </div>
+
+            <!-- Marquee Band – full-width, clips overflow -->
+            <div class="testimonials-marquee-outer">
+                <div class="testimonials-marquee-track">
+
+                    <!-- Original set -->
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="rating-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="testimonial-text">»Qualitativ sehr hochwertige Arbeit zu einem fairen Preis! Wir können CLOVIS uneingeschränkt weiterempfehlen.«</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JJ</div>
+                            <div class="author-info"><h4>Jacob J.</h4><p>Privatkunde</p></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="rating-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="testimonial-text">»Meine Fenster sehen makellos aus. Ich werde CLOVIS definitiv wieder beauftragen – absolut empfehlenswert!«</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JC</div>
+                            <div class="author-info"><h4>Jessica C.</h4><p>Gewerbekunde</p></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="rating-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="testimonial-text">»Für jede Art von Reinigungsarbeit – gewerblich oder privat – empfehle ich CLOVIS aus vollster Überzeugung.«</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">GT</div>
+                            <div class="author-info"><h4>Gail T.</h4><p>Hausbesitzerin</p></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="rating-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="testimonial-text">»Pünktlich, zuverlässig, und das Ergebnis übertrifft alle Erwartungen. Unser Büro war noch nie so sauber!«</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div class="author-info"><h4>Markus K.</h4><p>Büroleiter, Berlin</p></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="rating-stars" aria-label="5 von 5 Sternen">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <p class="testimonial-text">»Die Grundreinigung nach dem Umbau war perfekt. Kein Staub, kein Schmutz – wie frisch gebaut. Sehr professionelles Team!«</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info"><h4>Sandra R.</h4><p>Immobilienverwaltung</p></div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate set (for seamless infinite loop) -->
+                    <div class="testimonial-card" aria-hidden="true">
+                        <div>
+                            <div class="rating-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <p class="testimonial-text">»Qualitativ sehr hochwertige Arbeit zu einem fairen Preis! Wir können CLOVIS uneingeschränkt weiterempfehlen.«</p>
+                        </div>
+                        <div class="testimonial-author"><div class="author-avatar">JJ</div><div class="author-info"><h4>Jacob J.</h4><p>Privatkunde</p></div></div>
+                    </div>
+
+                    <div class="testimonial-card" aria-hidden="true">
+                        <div>
+                            <div class="rating-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <p class="testimonial-text">»Meine Fenster sehen makellos aus. Ich werde CLOVIS definitiv wieder beauftragen – absolut empfehlenswert!«</p>
+                        </div>
+                        <div class="testimonial-author"><div class="author-avatar">JC</div><div class="author-info"><h4>Jessica C.</h4><p>Gewerbekunde</p></div></div>
+                    </div>
+
+                    <div class="testimonial-card" aria-hidden="true">
+                        <div>
+                            <div class="rating-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <p class="testimonial-text">»Für jede Art von Reinigungsarbeit – gewerblich oder privat – empfehle ich CLOVIS aus vollster Überzeugung.«</p>
+                        </div>
+                        <div class="testimonial-author"><div class="author-avatar">GT</div><div class="author-info"><h4>Gail T.</h4><p>Hausbesitzerin</p></div></div>
+                    </div>
+
+                    <div class="testimonial-card" aria-hidden="true">
+                        <div>
+                            <div class="rating-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <p class="testimonial-text">»Pünktlich, zuverlässig, und das Ergebnis übertrifft alle Erwartungen. Unser Büro war noch nie so sauber!«</p>
+                        </div>
+                        <div class="testimonial-author"><div class="author-avatar">MK</div><div class="author-info"><h4>Markus K.</h4><p>Büroleiter, Berlin</p></div></div>
+                    </div>
+
+                    <div class="testimonial-card" aria-hidden="true">
+                        <div>
+                            <div class="rating-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                            <p class="testimonial-text">»Die Grundreinigung nach dem Umbau war perfekt. Kein Staub, kein Schmutz – wie frisch gebaut. Sehr professionelles Team!«</p>
+                        </div>
+                        <div class="testimonial-author"><div class="author-avatar">SR</div><div class="author-info"><h4>Sandra R.</h4><p>Immobilienverwaltung</p></div></div>
+                    </div>
+
+                </div><!-- /.testimonials-marquee-track -->
+            </div><!-- /.testimonials-marquee-outer -->
+        </section>
+
+        <!-- Interactive Inquiry Form Section (CTA Target) -->
+
+        <section class="inquiry-section section-spacing" id="anfrage">
+            <div class="container">
+                <div class="inquiry-wrapper">
+                    <div class="inquiry-info">
+                        <div class="badge">
+                            <span class="badge-dot"></span>
+                            Jetzt unverbindlich anfragen
+                        </div>
+                        <h2>Fordern Sie Ihr individuelles Angebot an</h2>
+
+                        <div class="inquiry-perks">
+                            <div class="inquiry-perk-item">
+                                <div class="perk-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <h4>100% kostenfrei & unverbindlich</h4>
+                                    <p>Keine versteckten Gebühren oder automatische Verträge</p>
+                                </div>
+                            </div>
+                            <div class="inquiry-perk-item">
+                                <div class="perk-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <h4>Schnelle Rückmeldung in max. 24h</h4>
+                                    <p>Direkte Beratung durch unsere Reinigungsmeister</p>
+                                </div>
+                            </div>
+                            <div class="inquiry-perk-item">
+                                <div class="perk-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div class="perk-text">
+                                    <h4>Datenschutzkonform (DSGVO)</h4>
+                                    <p>Ihre Angaben werden streng vertraulich verarbeitet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inquiry-form-card">
+                        <div class="form-success-banner">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div>
+                                <strong>Vielen Dank für Ihre Anfrage!</strong>
+                                <p style="font-size:0.9rem;margin:0;">Wir haben Ihre Daten erhalten und melden uns in Kürze mit einem Angebot bei Ihnen.</p>
+                            </div>
+                        </div>
+
+                        <form class="inquiry-form" method="POST" action="#">
+                            <div class="form-grid">
+                                <!-- Field 1: Dienstleistung (Dropdown) -->
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="dienstleistung">Gewünschte Dienstleistung <span class="req">*</span></label>
+                                    <select class="form-control" id="dienstleistung" name="dienstleistung" required>
+                                        <option value="" disabled selected>Bitte wählen Sie einen Service</option>
+                                        <option value="Gebäudereinigung">Gebäudereinigung (Regelmäßig / Unterhalt)</option>
+                                        <option value="Fensterreinigung">Fenster- & Glasreinigung</option>
+                                        <option value="Büroreinigung">Büro- & Praxisreinigung</option>
+                                        <option value="Grundreinigung">Grundreinigung / Bauendreinigung</option>
+                                        <option value="Hausmeisterservice">Hausmeisterservice & Objektbetreuung</option>
+                                        <option value="Kombination / Sonstiges">Kombi-Paket / Mehrere Dienste</option>
+                                    </select>
+                                </div>
+
+                                <!-- Field 2: Name/Firma -->
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="name">Name / Firma <span class="req">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="z. B. Max Mustermann oder Mustermann GmbH" required>
+                                </div>
+
+                                <!-- Field 3: Telefon -->
+                                <div class="form-group">
+                                    <label class="form-label" for="telefon">Telefonnummer <span class="req">*</span></label>
+                                    <input type="tel" class="form-control" id="telefon" name="telefon" placeholder="+49 170 1234567" required>
+                                </div>
+
+                                <!-- Field 4: Email -->
+                                <div class="form-group">
+                                    <label class="form-label" for="email">E-Mail-Adresse <span class="req">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@firma.de" required>
+                                </div>
+
+                                <!-- Field 5: Beschreibung -->
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="beschreibung">Beschreibung (Objektgröße, Reinigungsintervall, Besonderheiten)</label>
+                                    <textarea class="form-control" id="beschreibung" name="beschreibung" rows="3" placeholder="z. B. Bürofläche ca. 250 m², 2x wöchentlich, inkl. Fenster..."></textarea>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <p class="form-privacy">
+                                        Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
+                                    </p>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                        Kostenloses Angebot anfordern
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                        <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                    </a>
+                    <p>
+                        Ihr erfahrener und zuverlässiger Fachbetrieb für Gebäudereinigung, Bürohygiene, Glasreinigung und Liegenschaftsservice. Sauberkeit mit Präzision.
+                    </p>
+                    <div style="font-size: 0.85rem; color: #7D7871;">
+                        © 2026 CLOVIS Gebäudereinigung. Alle Rechte vorbehalten.
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="dienste.html">Unsere Dienste</a></li>
+                        <li><a href="galerie.html">Galerie & Einblicke</a></li>
+                        <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+                        <li><a href="#anfrage">Angebot anfragen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Dienstleistungen</h3>
+                    <ul class="footer-links">
+                        <li><a href="dienste.html#gebaeudereinigung">Gebäudereinigung</a></li>
+                        <li><a href="dienste.html#fensterreinigung">Fensterreinigung</a></li>
+                        <li><a href="dienste.html#bueroreinigung">Büroreinigung</a></li>
+                        <li><a href="dienste.html#grundreinigung">Grundreinigung</a></li>
+                        <li><a href="dienste.html#hausmeisterservice">Hausmeisterservice</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Direktkontakt</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Musterstraße 45<br>10115 Berlin</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+49 (0) 30 12345678</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>kontakt@clovis-reinigung.de</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Zertifizierter Fachbetrieb nach deutschen Qualitäts- und Umweltstandards.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    <a href="agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>

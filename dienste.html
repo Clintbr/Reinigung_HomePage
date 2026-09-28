@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Dienste | CLOVIS Gebäudereinigung</title>
+    <meta name="description" content="Übersicht aller Reinigungsdienstleistungen von CLOVIS: Gebäudereinigung, Fensterreinigung, Büroreinigung, Grundreinigung und Hausmeisterservice.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .service-detail-section {
+            padding: 4.5rem 0;
+            border-bottom: 1px solid var(--color-border-subtle);
+        }
+        .service-detail-section:nth-child(even) {
+            background-color: var(--color-bg-secondary);
+        }
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .service-detail-grid.reverse {
+            direction: rtl;
+        }
+        .service-detail-grid.reverse > * {
+            direction: ltr;
+        }
+        .service-detail-img {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-border-subtle);
+            height: 380px;
+        }
+        .service-detail-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .service-check-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin: 1.75rem 0 2rem;
+        }
+        .service-check-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+        .service-check-list li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--color-blue-600);
+            flex-shrink: 0;
+        }
+        @media (max-width: 900px) {
+            .service-detail-grid, .service-detail-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                direction: ltr;
+            }
+            .service-check-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container header-top-inner">
+            <div class="top-contact-list">
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+49 (0) 30 12345678</span>
+                </div>
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>kontakt@clovis-reinigung.de</span>
+                </div>
+            </div>
+            <div>
+                <span>Mo – Sa: 07:00 – 19:00 Uhr | Notdienst auf Anfrage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar" aria-label="Hauptnavigation">
+                <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                    <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Startseite</a>
+                    <a href="dienste.html" class="nav-link active">Unsere Dienste</a>
+                    <a href="galerie.html" class="nav-link">Galerie</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="kontakt.html" class="btn btn-primary btn-sm">Angebot anfordern</a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Menü öffnen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-backdrop"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobiles Menü">
+        <div class="drawer-header">
+            <div class="logo">
+                <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+            </div>
+            <button class="drawer-close" style="background:none;border:none;cursor:pointer;padding:0.5rem;" aria-label="Menü schließen">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html">Startseite</a>
+            <a href="dienste.html" class="active">Unsere Dienste</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="drawer-footer">
+            <a href="kontakt.html" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="document.querySelector('.drawer-close').click()">Angebot anfordern</a>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Tel: +49 (0) 30 12345678<br>kontakt@clovis-reinigung.de</p>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="badge" style="margin: 0 auto 1rem;">
+                    <span class="badge-dot"></span>
+                    Unser Leistungsspektrum
+                </div>
+                <h1>Präzise Reinigungsdienstleistungen</h1>
+                <p>
+                    Entdecken Sie unsere spezialisierten Services für Gewerbe, Hausverwaltungen und anspruchsvolle Privathaushalte.
+                </p>
+            </div>
+        </section>
+
+        <!-- Service 1: Gebäudereinigung -->
+        <section class="service-detail-section" id="gebaeudereinigung">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div>
+                        <div class="badge">Service 01</div>
+                        <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">Gebäudereinigung & Unterhalt</h2>
+                        <p>
+                            Ein gepflegtes Gebäude ist die Visitenkarte Ihres Unternehmens oder Ihrer Immobilie. Wir sorgen mit maßgeschneiderten Reinigungsintervallen für tadellose Treppenhäuser, repräsentative Eingangsbereiche und saubere Allgemeinflächen.
+                        </p>
+                        <ul class="service-check-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Treppenhaus- & Foyerpflege</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Fahrstühle & Geländerdesinfektion</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Keller- & Dachbodenbereiche</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Flexible Reinigungsintervalle</li>
+                        </ul>
+                        <a href="kontakt.html?service=gebaeudereinigung" class="btn btn-primary">Gebäudereinigung anfragen</a>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Gebäudereinigung Treppenhaus und Flur">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2: Fensterreinigung -->
+        <section class="service-detail-section" id="fensterreinigung">
+            <div class="container">
+                <div class="service-detail-grid reverse">
+                    <div>
+                        <div class="badge">Service 02</div>
+                        <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">Fenster- & Glasreinigung</h2>
+                        <p>
+                            Klare Sicht ohne Schlieren und Rückstände. Unser Glasreinigungsteam reinigt Fenster aller Art inklusive Rahmen, Falzen, Fensterbänken und schwer zugänglichen Glasüberdachungen fachgerecht und sicher.
+                        </p>
+                        <ul class="service-check-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Schaufenster & Glasfassaden</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Rahmen-, Dichtungs- & Falzreinigung</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Wintergärten & Vordächer</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Umweltfreundliche Reinstwassertechnik</li>
+                        </ul>
+                        <a href="kontakt.html?service=fensterreinigung" class="btn btn-primary">Fensterreinigung anfragen</a>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Fensterreinigung streifenfrei">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3: Büroreinigung -->
+        <section class="service-detail-section" id="bueroreinigung">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div>
+                        <div class="badge">Service 03</div>
+                        <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">Büro- & Praxisreinigung</h2>
+                        <p>
+                            Ein sauberes Arbeitsumfeld fördert die Konzentration und schützt die Gesundheit Ihrer Mitarbeiter. Wir reinigen diskret vor oder nach Ihren Geschäftszeiten, damit Ihr Betriebsablauf ungestört bleibt.
+                        </p>
+                        <ul class="service-check-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Schreibtische & IT-Gerätereinigung</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Hygienische Sanitärpflege & Desinfektion</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Teeküchen- & Kaffeemaschinenreinigung</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Abfalltrennung & Müllentsorgung</li>
+                        </ul>
+                        <a href="kontakt.html?service=bueroreinigung" class="btn btn-primary">Büroreinigung anfragen</a>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Büroreinigung Konferenzraum">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 4: Grundreinigung -->
+        <section class="service-detail-section" id="grundreinigung">
+            <div class="container">
+                <div class="service-detail-grid reverse">
+                    <div>
+                        <div class="badge">Service 04</div>
+                        <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">Grund- & Bauendreinigung</h2>
+                        <p>
+                            Wenn normale Unterhaltsreinigung nicht mehr ausreicht: Unsere intensive Grundreinigung befreit Hartböden, Fliesen, Teppiche und Inventar von hartnäckigsten Verschmutzungen, Farbresten oder Baustaub.
+                        </p>
+                        <ul class="service-check-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Entfernung alter Pflegefilme & Wachse</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Neubeschichtung & Versiegelung von Böden</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Baufein- & Bezugsfertig-Reinigung</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Tiefenhygiene für Fugen und Sanitär</li>
+                        </ul>
+                        <a href="kontakt.html?service=grundreinigung" class="btn btn-primary">Grundreinigung anfragen</a>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Grundreinigung und Bodenpflege">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 5: Hausmeisterservice -->
+        <section class="service-detail-section" id="hausmeisterservice">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div>
+                        <div class="badge">Service 05</div>
+                        <h2 style="font-size: 2.2rem; margin: 0.8rem 0 1rem;">Hausmeisterservice & Objektbetreuung</h2>
+                        <p>
+                            Die ganzheitliche Betreuung Ihrer Liegenschaft: Wir behalten Ihre Haustechnik im Blick, führen handwerkliche Kleinreparaturen durch, pflegen Grünflächen und stellen rechtzeitig die Mülltonnen bereit.
+                        </p>
+                        <ul class="service-check-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Regelmäßige Begehungen & Mängelberichte</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Kleinreparaturen (z. B. Leuchtmittelwechsel)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Mülltonnendienst nach Abfuhrkalender</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Rasenmähen & Unkrautentfernung</li>
+                        </ul>
+                        <a href="kontakt.html?service=hausmeisterservice" class="btn btn-primary">Hausmeisterservice anfragen</a>
+                    </div>
+                    <div class="service-detail-img">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" alt="CLOVIS Hausmeisterservice Objektpflege">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Bar -->
+        <section class="section-spacing" style="background-color: var(--color-blue-50); border-top: 1px solid var(--color-blue-200); text-align: center;">
+            <div class="container">
+                <div style="max-width: 680px; margin: 0 auto;">
+                    <div class="badge" style="margin: 0 auto 1rem;">Individuelle Lösungen</div>
+                    <h2 style="font-size: 2.25rem; margin-bottom: 1rem;">Benötigen Sie ein maßgeschneidertes Reinigungspaket?</h2>
+                    <p style="font-size: 1.05rem; margin-bottom: 2rem;">
+                        Wir kombinieren unsere Dienstleistungen exakt nach Ihren Anforderungen und erstellen Ihnen ein transparentes Festpreisangebot.
+                    </p>
+                    <a href="kontakt.html" class="btn btn-primary btn-lg">Jetzt unverbindlich anfragen</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                        <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                    </a>
+                    <p>
+                        Ihr erfahrener und zuverlässiger Fachbetrieb für Gebäudereinigung, Bürohygiene, Glasreinigung und Liegenschaftsservice. Sauberkeit mit Präzision.
+                    </p>
+                    <div style="font-size: 0.85rem; color: #7D7871;">
+                        © 2026 CLOVIS Gebäudereinigung. Alle Rechte vorbehalten.
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="dienste.html">Unsere Dienste</a></li>
+                        <li><a href="galerie.html">Galerie & Einblicke</a></li>
+                        <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+                        <li><a href="kontakt.html">Angebot anfragen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Dienstleistungen</h3>
+                    <ul class="footer-links">
+                        <li><a href="dienste.html#gebaeudereinigung">Gebäudereinigung</a></li>
+                        <li><a href="dienste.html#fensterreinigung">Fensterreinigung</a></li>
+                        <li><a href="dienste.html#bueroreinigung">Büroreinigung</a></li>
+                        <li><a href="dienste.html#grundreinigung">Grundreinigung</a></li>
+                        <li><a href="dienste.html#hausmeisterservice">Hausmeisterservice</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Direktkontakt</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Musterstraße 45<br>10115 Berlin</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+49 (0) 30 12345678</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>kontakt@clovis-reinigung.de</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Zertifizierter Fachbetrieb nach deutschen Qualitäts- und Umweltstandards.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    <a href="agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
