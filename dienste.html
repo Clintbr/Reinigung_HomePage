@@ -108,7 +108,87 @@
 
                 <div class="nav-links">
                     <a href="index.html" class="nav-link">Startseite</a>
-                    <a href="dienste.html" class="nav-link active">Unsere Dienste</a>
+                    
+                    <!-- Dropdown: Unsere Dienste -->
+                    <div class="nav-item-dropdown">
+                        <a href="dienste.html" class="nav-link active dropdown-trigger" id="dienste-dropdown-toggle">
+                            <span>Unsere Dienste</span>
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <span class="dropdown-title">Leistungsübersicht</span>
+                                <a href="dienste.html" class="dropdown-view-all">Alle anzeigen &rarr;</a>
+                            </div>
+                            <div class="dropdown-grid">
+                                <a href="dienste.html?service=gebaeudereinigung" class="dropdown-item" data-service-id="gebaeudereinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Gebäudereinigung</span>
+                                            <span class="dropdown-item-badge">01</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Treppenhaus- & Foyerpflege</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=fensterreinigung" class="dropdown-item" data-service-id="fensterreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Fensterreinigung</span>
+                                            <span class="dropdown-item-badge">02</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Streifenfreie Glas- & Falzreinigung</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=bueroreinigung" class="dropdown-item" data-service-id="bueroreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Büroreinigung</span>
+                                            <span class="dropdown-item-badge">03</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Arbeitsplatz- & Praxishygiene</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=grundreinigung" class="dropdown-item" data-service-id="grundreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Grundreinigung</span>
+                                            <span class="dropdown-item-badge">04</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Intensive Tiefen- & Baureinigung</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=hausmeisterservice" class="dropdown-item" data-service-id="hausmeisterservice">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Hausmeisterservice</span>
+                                            <span class="dropdown-item-badge">05</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Liegenschaftspflege & Reparaturen</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer">
+                                <span>Individueller Reinigungsbedarf?</span>
+                                <a href="kontakt.html" class="dropdown-cta-link">Angebot anfragen &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <a href="galerie.html" class="nav-link">Galerie</a>
                     <a href="kontakt.html" class="nav-link">Kontakt</a>
                 </div>
@@ -137,7 +217,36 @@
         </div>
         <div class="drawer-links">
             <a href="index.html">Startseite</a>
-            <a href="dienste.html" class="active">Unsere Dienste</a>
+            
+            <div class="drawer-dropdown">
+                <div class="drawer-dropdown-toggle">
+                    <a href="dienste.html" class="active">Unsere Dienste</a>
+                    <button class="drawer-submenu-btn" aria-label="Dienste Untermenü">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="dienste.html?service=gebaeudereinigung" class="drawer-sublink" data-service-id="gebaeudereinigung">
+                        <span class="badge-dot"></span> 01 Gebäudereinigung
+                    </a>
+                    <a href="dienste.html?service=fensterreinigung" class="drawer-sublink" data-service-id="fensterreinigung">
+                        <span class="badge-dot"></span> 02 Fensterreinigung
+                    </a>
+                    <a href="dienste.html?service=bueroreinigung" class="drawer-sublink" data-service-id="bueroreinigung">
+                        <span class="badge-dot"></span> 03 Büroreinigung
+                    </a>
+                    <a href="dienste.html?service=grundreinigung" class="drawer-sublink" data-service-id="grundreinigung">
+                        <span class="badge-dot"></span> 04 Grundreinigung
+                    </a>
+                    <a href="dienste.html?service=hausmeisterservice" class="drawer-sublink" data-service-id="hausmeisterservice">
+                        <span class="badge-dot"></span> 05 Hausmeisterservice
+                    </a>
+                    <a href="dienste.html" class="drawer-sublink-all" data-service-id="all">
+                        &rarr; Alle Dienste anzeigen
+                    </a>
+                </div>
+            </div>
+
             <a href="galerie.html">Galerie</a>
             <a href="kontakt.html">Kontakt</a>
         </div>
@@ -161,6 +270,37 @@
                 </p>
             </div>
         </section>
+
+        <!-- Services Filter / Tab Bar -->
+        <div class="services-filter-nav container">
+            <div class="services-filter-tabs" role="tablist">
+                <button class="services-tab-btn active" data-service="all" role="tab">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                    Alle Dienste
+                </button>
+                <button class="services-tab-btn" data-service="gebaeudereinigung" role="tab">
+                    <span class="tab-num">01</span> Gebäudereinigung
+                </button>
+                <button class="services-tab-btn" data-service="fensterreinigung" role="tab">
+                    <span class="tab-num">02</span> Fensterreinigung
+                </button>
+                <button class="services-tab-btn" data-service="bueroreinigung" role="tab">
+                    <span class="tab-num">03</span> Büroreinigung
+                </button>
+                <button class="services-tab-btn" data-service="grundreinigung" role="tab">
+                    <span class="tab-num">04</span> Grundreinigung
+                </button>
+                <button class="services-tab-btn" data-service="hausmeisterservice" role="tab">
+                    <span class="tab-num">05</span> Hausmeisterservice
+                </button>
+            </div>
+
+            <!-- Single Section Filter Notice -->
+            <div class="service-filter-info" style="display: none;">
+                <span>Ausgewählt: <strong class="service-filter-info-name"></strong></span>
+                <button type="button" class="service-filter-reset">Alle Dienste anzeigen</button>
+            </div>
+        </div>
 
         <!-- Service 1: Gebäudereinigung -->
         <section class="service-detail-section" id="gebaeudereinigung">
@@ -345,7 +485,7 @@
                     <ul class="footer-contact-list">
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <span>Musterstraße 45<br>10115 Berlin</span>
+                            <span>Musterstraße 45<br>00000 Stuttgart</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -373,6 +513,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

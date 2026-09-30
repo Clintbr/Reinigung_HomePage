@@ -1,0 +1,13 @@
+# Environment Variables (niemals committen!)
+.env
+.env.local
+
+# Dependencies
+node_modules/
+
+# Build Output (wird von Netlify beim Deploy generiert)
+dist/
+
+# IDE / Editor Files
+.idea/
+.vscode/
