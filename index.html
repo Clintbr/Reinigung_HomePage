@@ -939,13 +939,21 @@
                     return;
                 }
                 const msg = [
-                    '\uD83E\uDDF9 *Anfrage über ProKlar Glasreinigung*',
+                    '*Anfrage über ProKlar Glasreinigung*',
                     '',
-                    `\uD83D\uDCCB *Dienstleistung:* ${dienstleistung}`,
-                    `\uD83D\uDC64 *Name / Firma:* ${name}`,
-                    `\uD83D\uDCDE *Telefon:* ${telefon}`,
-                    `\uD83D\uDCE7 *E-Mail:* ${email}`,
-                    beschreibung ? `\uD83D\uDCDD *Beschreibung:* ${beschreibung}` : '',
+                    'Hallo,',
+                    '',
+                    'ich möchte gerne eine Anfrage zu folgender Dienstleistung stellen:',
+                    '',
+                    `• *Dienstleistung:* ${dienstleistung}`,
+                    `• *Name / Firma:* ${name}`,
+                    `• *Telefon:* ${telefon}`,
+                    `• *E-Mail:* ${email}`,
+                    beschreibung ? `• *Weitere Informationen:* ${beschreibung}` : '',
+                    '',
+                    'Ich freue mich auf Ihre Rückmeldung.',
+                    '',
+                    'Vielen Dank und freundliche Grüße'
                 ].filter(Boolean).join('\n');
                 const encoded = encodeURIComponent(msg);
                 window.open(`https://wa.me/4917665838189?text=${encoded}`, '_blank', 'noopener');
