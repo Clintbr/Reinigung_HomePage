@@ -1,4 +1,6 @@
 import { EMAILJS_CONFIG } from './email-config.js';
+import { initEinsatzgebietChecker } from './einsatzgebiet-ui.js';
+import { initContactMap } from './contact-map.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Header scroll effect
@@ -645,4 +647,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial setup
         updateCarousel();
     }
+
+    // 8. Einsatzgebiet-Checker Initialisierung
+    initEinsatzgebietChecker();
+
+    // 9. Interaktive Kontakt-Karte Initialisierung
+    initContactMap();
 });
