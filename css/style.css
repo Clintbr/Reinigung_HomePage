@@ -3712,5 +3712,417 @@ textarea.form-control {
     padding: 1px 6px !important;
 }
 
+/* ==========================================================================
+   Karriere (Career) & Initiativbewerbung Styles
+   ========================================================================== */
+
+/* Career Hero Highlights */
+.career-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.career-quick-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.career-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.career-stat-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-blue-50);
+    color: var(--color-blue-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Career Benefits Grid */
+.career-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 992px) {
+    .career-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .career-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.career-benefit-card {
+    background: #FFFFFF;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--shadow-xs);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.career-benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-blue-300);
+}
+
+.career-benefit-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, var(--color-blue-50), var(--color-blue-100));
+    color: var(--color-blue-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+}
+
+.career-benefit-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.35;
+}
+
+.career-benefit-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Application Form Outer Container */
+.career-form-container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.career-form-card {
+    background: #FFFFFF;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+    .career-form-card {
+        padding: 1.75rem 1.25rem;
+    }
+}
+
+/* Form Section Header within Career Form */
+.career-form-section {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.career-form-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.form-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-section-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-blue-600);
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.form-section-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0.2rem 0 0 0;
+}
+
+/* Skills Checkboxes Grid */
+.career-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+}
+
+@media (max-width: 680px) {
+    .career-skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-checkbox-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 1.15rem;
+    background-color: var(--color-bg-secondary);
+    border: 1.5px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    user-select: none;
+}
+
+.skill-checkbox-card:hover {
+    background-color: var(--color-blue-50);
+    border-color: var(--color-blue-300);
+    transform: translateY(-1px);
+}
+
+.skill-checkbox-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.skill-checkbox-indicator {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-border-medium);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: all var(--transition-fast);
+}
+
+.skill-checkbox-indicator svg {
+    width: 14px;
+    height: 14px;
+    stroke: #FFFFFF;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all var(--transition-fast);
+}
+
+.skill-checkbox-card:has(input:checked),
+.skill-checkbox-card.is-checked {
+    background-color: #EFF6FF;
+    border-color: var(--color-blue-600);
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);
+}
+
+.skill-checkbox-card input[type="checkbox"]:checked + .skill-checkbox-indicator,
+.skill-checkbox-card:has(input:checked) .skill-checkbox-indicator,
+.skill-checkbox-card.is-checked .skill-checkbox-indicator {
+    background-color: var(--color-blue-600);
+    border-color: var(--color-blue-600);
+}
+
+.skill-checkbox-card input[type="checkbox"]:checked + .skill-checkbox-indicator svg,
+.skill-checkbox-card:has(input:checked) .skill-checkbox-indicator svg,
+.skill-checkbox-card.is-checked .skill-checkbox-indicator svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skill-checkbox-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.skill-checkbox-title {
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    display: block;
+    line-height: 1.35;
+}
+
+.skill-checkbox-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: 0.15rem;
+    line-height: 1.35;
+}
+
+/* Radio Group for Availability / License */
+.career-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.career-radio-chip {
+    position: relative;
+    cursor: pointer;
+}
+
+.career-radio-chip input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.career-radio-chip span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1rem;
+    border: 1.5px solid var(--color-border-medium);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background-color: #FFFFFF;
+    transition: all var(--transition-fast);
+}
+
+.career-radio-chip:hover span {
+    border-color: var(--color-blue-400);
+    color: var(--color-blue-700);
+    background-color: var(--color-blue-50);
+}
+
+.career-radio-chip input:checked + span {
+    background-color: var(--color-blue-600);
+    border-color: var(--color-blue-600);
+    color: #FFFFFF;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* Language Chips Quick Add */
+.language-quick-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.lang-chip {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-full);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.lang-chip:hover {
+    background: var(--color-blue-50);
+    border-color: var(--color-blue-300);
+    color: var(--color-blue-700);
+}
+
+/* Application Steps / Process */
+.career-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 992px) {
+    .career-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .career-process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.career-process-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.career-process-step {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-blue-500);
+    opacity: 0.85;
+    line-height: 1;
+}
+
+.career-process-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.career-process-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+
 
 

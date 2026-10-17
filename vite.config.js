@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         kontakt: resolve(__dirname, 'kontakt.html'),
         dienste: resolve(__dirname, 'dienste.html'),
+        karriere: resolve(__dirname, 'karriere.html'),
         galerie: resolve(__dirname, 'galerie.html'),
         impressum: resolve(__dirname, 'impressum.html'),
         agb: resolve(__dirname, 'agb.html'),

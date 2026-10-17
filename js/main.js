@@ -62,6 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
+            // Spezial-Handling für Initiativbewerbungs-Formular (Karriere)
+            // Stellt sicher, dass das existierende EmailJS-Template alle Details (Kompetenzen, Sprachen, Notizen)
+            // im Feld "beschreibung" erhält, ohne dass das EmailJS-Template angepasst werden muss.
+            let originalUserDescription = '';
+            const isCareerForm = form.classList.contains('career-form');
+
             const publicKey = EMAILJS_CONFIG.PUBLIC_KEY;
             const serviceId = EMAILJS_CONFIG.SERVICE_ID;
             const templateId = EMAILJS_CONFIG.TEMPLATE_ID;
@@ -92,10 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 successBanner.classList.add('active');
                 successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             } else {
-                showToast('Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.', 'success');
+                showToast('Vielen Dank! Ihre Bewerbung wurde erfolgreich übermittelt. Wir melden uns zeitnah bei Ihnen.', 'success');
             }
 
             form.reset();
+            if (isCareerForm) {
+                form.querySelectorAll('.skill-checkbox-card').forEach(card => card.classList.remove('is-checked'));
+            }
             return true;
 
         } catch (error) {
@@ -653,4 +662,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Interaktive Kontakt-Karte Initialisierung
     initContactMap();
+
+    // 10. Initiativbewerbung (Karriere) Interaktionen
+    initCareerForm();
+
+    function initCareerForm() {
+        const careerForm = document.querySelector('form.career-form');
+        if (!careerForm) return;
+
+        // Checkbox-Karten visuelles Toggling & Event-Sync
+        const skillCards = careerForm.querySelectorAll('.skill-checkbox-card');
+        skillCards.forEach(card => {
+            const checkbox = card.querySelector('input[type="checkbox"]');
+            if (!checkbox) return;
+
+            // Initialen Status synchronisieren
+            card.classList.toggle('is-checked', checkbox.checked);
+
+            // Reagiert auf die native Umschaltung des Labels
+            checkbox.addEventListener('change', () => {
+                card.classList.toggle('is-checked', checkbox.checked);
+            });
+        });
+
+        // Sprach-Quick-Chips Klick-Handler
+        const langChips = careerForm.querySelectorAll('.lang-chip');
+        const langInput = careerForm.querySelector('input[name="sprachen"]');
+        if (langInput && langChips.length > 0) {
+            langChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const langVal = chip.getAttribute('data-lang') || chip.textContent.trim();
+                    let currentVal = langInput.value.trim();
+                    if (!currentVal) {
+                        langInput.value = langVal;
+                    } else if (!currentVal.toLowerCase().includes(langVal.toLowerCase())) {
+                        langInput.value = `${currentVal}, ${langVal}`;
+                    }
+                    langInput.focus();
+                });
+            });
+        }
+
+        // WhatsApp Schnellbewerbung
+        const careerWaBtn = document.getElementById('career-btn-send-whatsapp');
+        if (careerWaBtn) {
+            careerWaBtn.addEventListener('click', () => {
+                const name = careerForm.querySelector('[name="name"]')?.value?.trim() || '';
+                const tel = careerForm.querySelector('[name="telefon"]')?.value?.trim() || '';
+                const email = careerForm.querySelector('[name="email"]')?.value?.trim() || '';
+                const wohnort = careerForm.querySelector('[name="wohnort"]')?.value?.trim() || '';
+                const verfuegbarkeit = careerForm.querySelector('[name="verfuegbarkeit"]')?.value || '';
+                const sprachen = careerForm.querySelector('[name="sprachen"]')?.value?.trim() || '';
+                const userNotes = careerForm.querySelector('textarea[name="beschreibung"]')?.value?.trim() || '';
+
+                const checkedSkills = Array.from(careerForm.querySelectorAll('input[name="kompetenzen"]:checked'))
+                    .map(cb => cb.value);
+
+                let msg = 'Hallo CLOVIS Gebäudereinigung,\nich möchte mich gerne initiativ bei Ihnen bewerben!';
+                if (name) msg += `\n\nName: ${name}`;
+                if (tel) msg += `\nTelefon: ${tel}`;
+                if (email) msg += `\nE-Mail: ${email}`;
+                if (wohnort) msg += `\nWohnort / PLZ: ${wohnort}`;
+                if (verfuegbarkeit) msg += `\nAnstellung: ${verfuegbarkeit}`;
+                if (checkedSkills.length > 0) {
+                    msg += `\n\nKompetenzen:\n${checkedSkills.map(s => `- ${s}`).join('\n')}`;
+                }
+                if (sprachen) msg += `\n\nSprachen: ${sprachen}`;
+                if (userNotes) msg += `\n\nÜber mich:\n${userNotes}`;
+
+                const waUrl = `https://wa.me/4917665838189?text=${encodeURIComponent(msg)}`;
+                window.open(waUrl, '_blank', 'noopener');
+            });
+        }
+    }
 });

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karriere & Initiativbewerbung | CLOVIS Gebäudereinigung</title>
+    <meta name="description" content="Werden Sie Teil von CLOVIS Gebäudereinigung: Initiativbewerbung für Reinigungskräfte, Glasreiniger und Hausmeister im Raum Göppingen, Rechberghausen & Umgebung.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/pictures/logo_mini.png">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container header-top-inner">
+            <div class="top-contact-list">
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+49 (0) 7161 9666659</span>
+                </div>
+                <div class="top-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span>proklarglasreinigung@outlook.com</span>
+                </div>
+            </div>
+            <div>
+                <span>Mo – Sa: 07:00 – 19:00 Uhr | Notdienst auf Anfrage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar" aria-label="Hauptnavigation">
+                <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                    <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Startseite</a>
+                    
+                    <!-- Dropdown: Unsere Dienste -->
+                    <div class="nav-item-dropdown">
+                        <a href="dienste.html" class="nav-link dropdown-trigger" id="dienste-dropdown-toggle">
+                            <span>Unsere Dienste</span>
+                            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-header">
+                                <span class="dropdown-title">Leistungsübersicht</span>
+                                <a href="dienste.html" class="dropdown-view-all">Alle anzeigen &rarr;</a>
+                            </div>
+                            <div class="dropdown-grid">
+                                <a href="dienste.html?service=gebaeudereinigung" class="dropdown-item" data-service-id="gebaeudereinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Gebäudereinigung</span>
+                                            <span class="dropdown-item-badge">01</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Treppenhaus- & Foyerpflege</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=fensterreinigung" class="dropdown-item" data-service-id="fensterreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Fensterreinigung</span>
+                                            <span class="dropdown-item-badge">02</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Streifenfreie Glas- & Falzreinigung</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=bueroreinigung" class="dropdown-item" data-service-id="bueroreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Büroreinigung</span>
+                                            <span class="dropdown-item-badge">03</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Arbeitsplatz- & Praxishygiene</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=grundreinigung" class="dropdown-item" data-service-id="grundreinigung">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l-3-3Z"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Grundreinigung</span>
+                                            <span class="dropdown-item-badge">04</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Intensive Tiefen- & Baureinigung</div>
+                                    </div>
+                                </a>
+                                <a href="dienste.html?service=hausmeisterservice" class="dropdown-item" data-service-id="hausmeisterservice">
+                                    <div class="dropdown-item-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    </div>
+                                    <div class="dropdown-item-content">
+                                        <div class="dropdown-item-title">
+                                            <span>Hausmeisterservice</span>
+                                            <span class="dropdown-item-badge">05</span>
+                                        </div>
+                                        <div class="dropdown-item-desc">Liegenschaftspflege & Reparaturen</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer">
+                                <span>Individueller Reinigungsbedarf?</span>
+                                <a href="kontakt.html" class="dropdown-cta-link">Angebot anfragen &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Karriere (neu vor Galerie) -->
+                    <a href="karriere.html" class="nav-link active">Karriere</a>
+                    <a href="galerie.html" class="nav-link">Galerie</a>
+                    <a href="kontakt.html" class="nav-link">Kontakt</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a href="#bewerbung" class="btn btn-primary btn-sm">Jetzt bewerben</a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Menü öffnen">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="drawer-backdrop"></div>
+    <aside class="mobile-nav-drawer" aria-label="Mobiles Menü">
+        <div class="drawer-header">
+            <div class="logo">
+                <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+            </div>
+            <button class="drawer-close" style="background:none;border:none;cursor:pointer;padding:0.5rem;" aria-label="Menü schließen">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html">Startseite</a>
+            
+            <div class="drawer-dropdown">
+                <div class="drawer-dropdown-toggle">
+                    <a href="dienste.html">Unsere Dienste</a>
+                    <button class="drawer-submenu-btn" aria-label="Dienste Untermenü">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                </div>
+                <div class="drawer-submenu">
+                    <a href="dienste.html?service=gebaeudereinigung" class="drawer-sublink" data-service-id="gebaeudereinigung">
+                        <span class="badge-dot"></span> 01 Gebäudereinigung
+                    </a>
+                    <a href="dienste.html?service=fensterreinigung" class="drawer-sublink" data-service-id="fensterreinigung">
+                        <span class="badge-dot"></span> 02 Fensterreinigung
+                    </a>
+                    <a href="dienste.html?service=bueroreinigung" class="drawer-sublink" data-service-id="bueroreinigung">
+                        <span class="badge-dot"></span> 03 Büroreinigung
+                    </a>
+                    <a href="dienste.html?service=grundreinigung" class="drawer-sublink" data-service-id="grundreinigung">
+                        <span class="badge-dot"></span> 04 Grundreinigung
+                    </a>
+                    <a href="dienste.html?service=hausmeisterservice" class="drawer-sublink" data-service-id="hausmeisterservice">
+                        <span class="badge-dot"></span> 05 Hausmeisterservice
+                    </a>
+                    <a href="dienste.html" class="drawer-sublink-all" data-service-id="all">
+                        &rarr; Alle Dienste anzeigen
+                    </a>
+                </div>
+            </div>
+
+            <!-- Karriere im mobilen Menü vor Galerie -->
+            <a href="karriere.html" class="active">Karriere</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="drawer-footer">
+            <a href="#bewerbung" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="document.querySelector('.drawer-close').click()">Initiativ bewerben</a>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Tel: +49 (0) 7161 9666659<br>proklarglasreinigung@outlook.com</p>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Page Header / Hero -->
+        <section class="page-header">
+            <div class="container">
+                <div class="career-hero-badge">
+                    <span class="badge-dot"></span>
+                    Initiativbewerbung • Wir freuen uns auf Sie!
+                </div>
+                <h1 style="max-width: 820px; margin: 0 auto 1.25rem;">
+                    Werden Sie Teil unseres Teams – <span style="color: var(--color-blue-600);">Ihre Initiativbewerbung</span>
+                </h1>
+                <p style="max-width: 720px; margin: 0 auto;">
+                    Sie haben einen geschulten Blick für Sauberkeit, packen gerne an oder bringen wertvolle Erfahrung in der Gebäudereinigung mit? 
+                    Bei CLOVIS zählt Einsatzbereitschaft und Zuverlässigkeit. Bewerben Sie sich unkompliziert ohne aufwendiges Anschreiben in nur 2 Minuten!
+                </p>
+
+                <div class="career-quick-stats" style="justify-content: center; max-width: 860px; margin: 2rem auto 0;">
+                    <div class="career-stat-item">
+                        <div class="career-stat-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <span>Bewerbung in 2 Minuten</span>
+                    </div>
+                    <div class="career-stat-item">
+                        <div class="career-stat-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <span>Faire, pünktliche Bezahlung</span>
+                    </div>
+                    <div class="career-stat-item">
+                        <div class="career-stat-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <span>Wohnortnahe Einsätze</span>
+                    </div>
+                    <div class="career-stat-item">
+                        <div class="career-stat-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <span>Antwort in 24–48h</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits / Why CLOVIS Section -->
+        <section class="section-spacing" style="background-color: var(--color-bg-secondary); padding-top: 4.5rem; padding-bottom: 4.5rem;">
+            <div class="container">
+                <div class="section-header" style="margin: 0 auto 1.5rem;">
+                    <div class="badge" style="margin-bottom: 0.75rem;">
+                        <span class="badge-dot"></span>
+                        Ihre Vorteile
+                    </div>
+                    <h2>Warum es sich lohnt, bei CLOVIS zu arbeiten</h2>
+                    <p>Wir wissen, dass exzellente Sauberkeit nur durch ein starkes, zufriedenes und geschätztes Team entsteht.</p>
+                </div>
+
+                <div class="career-benefits-grid">
+                    <div class="career-benefit-card">
+                        <div class="career-benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>Attraktive Vergütung</h3>
+                        <p>Faire, leistungsgerechte Bezahlung über Tarif sowie verlässliche, pünktliche Abrechnung jeden Monat.</p>
+                    </div>
+
+                    <div class="career-benefit-card">
+                        <div class="career-benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Familiäres Arbeitsklima</h3>
+                        <p>Ein respektvoller Umgang auf Augenhöhe, offene Kommunikation und ein hilfsbereites Team, das zusammenhält.</p>
+                    </div>
+
+                    <div class="career-benefit-card">
+                        <div class="career-benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h3>Moderne Ausrüstung</h3>
+                        <p>Ergonomische Arbeitsmittel, hochwertige Profi-Reinigungsgeräte und gestellte Arbeitskleidung für gesundes Arbeiten.</p>
+                    </div>
+
+                    <div class="career-benefit-card">
+                        <div class="career-benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                        </div>
+                        <h3>Flexible Arbeitsmodelle</h3>
+                        <p>Ob Vollzeit, Teilzeit oder Minijob (538 €) – wir stimmen Arbeitszeiten und Objekte bestmöglich auf Ihren Alltag ab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Application Form Section -->
+        <section class="section-spacing" id="bewerbung">
+            <div class="container">
+                <div class="career-form-container">
+                    
+                    <div class="section-header" style="margin: 0 auto 2.5rem; text-align: center;">
+                        <div class="badge" style="margin-bottom: 0.75rem;">
+                            <span class="badge-dot"></span>
+                            Online-Bewerbungsformular
+                        </div>
+                        <h2>Ihre Initiativbewerbung bei CLOVIS</h2>
+                        <p style="max-width: 650px; margin: 0 auto;">
+                            Wählen Sie einfach Ihre Fähigkeiten aus, nennen Sie uns Ihre Sprachkenntnisse und Kontaktdaten. 
+                            Wir melden uns persönlich bei Ihnen!
+                        </p>
+                    </div>
+
+                    <div class="career-form-card">
+                        
+                        <!-- Success Banner -->
+                        <div class="form-success-banner" id="career-success-banner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div>
+                                <strong style="font-size: 1.05rem;">Bewerbung erfolgreich gesendet!</strong>
+                                <p style="font-size: 0.925rem; margin-top: 0.2rem;">
+                                    Vielen Dank für Ihre Initiativbewerbung und Ihr Vertrauen. Unser Team prüft Ihre Angaben und meldet sich innerhalb von 24–48 Stunden telefonisch oder per E-Mail bei Ihnen.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Error Banner -->
+                        <div class="form-error-banner" id="career-error-banner">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <div>
+                                <strong style="font-size: 1.05rem;">Übertragung fehlgeschlagen!</strong>
+                                <p style="font-size: 0.925rem; margin-top: 0.2rem;" class="error-msg-text">
+                                    Es gab ein technisches Problem beim Senden. Bitte versuchen Sie es erneut oder bewerben Sie sich direkt via WhatsApp oder telefonisch unter +49 (0) 7161 9666659.
+                                </p>
+                            </div>
+                        </div>
+
+                        <form class="career-form contact-form" method="POST" action="#" data-emailjs="true" id="karriere-bewerbung-form">
+
+                            <!-- Block 1: Persönliche Kontaktdaten -->
+                            <div class="career-form-section">
+                                <div class="form-section-header">
+                                    <div class="form-section-number">1</div>
+                                    <div>
+                                        <h3 class="form-section-title">Persönliche Angaben & Erreichbarkeit</h3>
+                                        <p class="form-section-subtitle">Wie können wir Sie am besten erreichen?</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label class="form-label" for="career-name">Vor- und Nachname <span class="req">*</span></label>
+                                        <input type="text" class="form-control" id="career-name" name="name" placeholder="z. B. Maria Musterfrau" required autocomplete="name">
+                                    </div>
+
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Anrede <span class="req">*</span></label>
+                                        <div class="career-radio-group">
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="anrede" value="Kein" checked>
+                                                <span>Kein</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="anrede" value="Frau">
+                                                <span>Frau</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="anrede" value="Herr">
+                                                <span>Herr</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="career-phone">Telefon- / Handynummer <span class="req">*</span></label>
+                                        <input type="tel" class="form-control" id="career-phone" name="telefon" placeholder="+49 170 1234567" required autocomplete="tel">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="career-email">E-Mail-Adresse <span class="req">*</span></label>
+                                        <input type="email" class="form-control" id="career-email" name="email" placeholder="ihre.email@beispiel.de" required autocomplete="email">
+                                    </div>
+
+                                    <div class="form-group full-width">
+                                        <label class="form-label" for="career-wohnort">Wohnort & Postleitzahl <span class="req">*</span></label>
+                                        <input type="text" class="form-control" id="career-wohnort" name="wohnort" placeholder="z. B. 73098 Rechberghausen oder 73033 Göppingen" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Block 2: Rahmenbedingungen & Mobilität -->
+                            <div class="career-form-section">
+                                <div class="form-section-header">
+                                    <div class="form-section-number">2</div>
+                                    <div>
+                                        <h3 class="form-section-title">Verfügbarkeit & Mobilität</h3>
+                                        <p class="form-section-subtitle">Welches Arbeitsmodell suchen Sie?</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Gewünschte Anstellungsart <span class="req">*</span></label>
+                                        <div class="career-radio-group">
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="verfuegbarkeit" value="Vollzeit" checked>
+                                                <span>Vollzeit</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="verfuegbarkeit" value="Teilzeit">
+                                                <span>Teilzeit</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="verfuegbarkeit" value="Minijob (538 €)">
+                                                <span>Minijob (538 €)</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="verfuegbarkeit" value="Aushilfe / Flexibel">
+                                                <span>Aushilfe / Flexibel</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Führerschein Klasse B vorhanden?</label>
+                                        <div class="career-radio-group">
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="fuehrerschein" value="Ja, PKW-Führerschein vorhanden" checked>
+                                                <span>Ja, Klasse B</span>
+                                            </label>
+                                            <label class="career-radio-chip">
+                                                <input type="radio" name="fuehrerschein" value="Nein, kein Führerschein">
+                                                <span>Nein</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="career-start">Möglicher Arbeitsbeginn</label>
+                                        <input type="text" class="form-control" id="career-start" name="starttermin" placeholder="z. B. Ab sofort / zum 01. des Monats">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Block 3: Wahlkästchen für Kompetenzen rund um die Reinigung -->
+                            <div class="career-form-section">
+                                <div class="form-section-header">
+                                    <div class="form-section-number">3</div>
+                                    <div>
+                                        <h3 class="form-section-title">Kompetenzen rund um die Reinigung</h3>
+                                        <p class="form-section-subtitle">Wählen Sie alle Bereiche aus, in denen Sie Erfahrung haben oder die Sie sich zutrauen (Mehrfachauswahl möglich):</p>
+                                    </div>
+                                </div>
+
+                                <div class="career-skills-grid">
+                                    <!-- Skill 1 -->
+                                    <label class="skill-checkbox-card" for="skill-buero">
+                                        <input type="checkbox" id="skill-buero" name="kompetenzen" value="Unterhalts- & Büroreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Unterhalts- & Büroreinigung</span>
+                                            <span class="skill-checkbox-desc">Schreibtische, Sanitär, Abfallentsorgung, Küchen</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 2 -->
+                                    <label class="skill-checkbox-card" for="skill-glas">
+                                        <input type="checkbox" id="skill-glas" name="kompetenzen" value="Glas- & Fensterreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Glas- & Fensterreinigung</span>
+                                            <span class="skill-checkbox-desc">Streifenfreies Abziehen, Rahmen, Falze, Schaufenster</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 3 -->
+                                    <label class="skill-checkbox-card" for="skill-treppe">
+                                        <input type="checkbox" id="skill-treppe" name="kompetenzen" value="Treppenhaus- & Wohnanlagenreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Treppenhaus- & Flurreinigung</span>
+                                            <span class="skill-checkbox-desc">Treppen, Handläufe, Eingangsbereiche, Briefkästen</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 4 -->
+                                    <label class="skill-checkbox-card" for="skill-grund">
+                                        <input type="checkbox" id="skill-grund" name="kompetenzen" value="Grund- & Tiefenreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Grund- & Tiefenreinigung</span>
+                                            <span class="skill-checkbox-desc">Hartnäckiger Schmutz, Sanitär-Tiefenreinigung, Bodenpflege</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 5 -->
+                                    <label class="skill-checkbox-card" for="skill-bau">
+                                        <input type="checkbox" id="skill-bau" name="kompetenzen" value="Baufein- & Renovierungsreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Baufein- & Endreinigung</span>
+                                            <span class="skill-checkbox-desc">Schlussreinigung nach Handwerkern & Übergaben</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 6 -->
+                                    <label class="skill-checkbox-card" for="skill-maschinen">
+                                        <input type="checkbox" id="skill-maschinen" name="kompetenzen" value="Bedienung von Reinigungsmaschinen">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Reinigungsmaschinen</span>
+                                            <span class="skill-checkbox-desc">Scheuersaugmaschinen, Einscheibengeräte, Nasssauger</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 7 -->
+                                    <label class="skill-checkbox-card" for="skill-polster">
+                                        <input type="checkbox" id="skill-polster" name="kompetenzen" value="Teppich- & Polsterreinigung">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Teppich- & Polsterreinigung</span>
+                                            <span class="skill-checkbox-desc">Spritz-Extraktionsgeräte, Faserpflege & Fleckenbehandlung</span>
+                                        </div>
+                                    </label>
+
+                                    <!-- Skill 8 -->
+                                    <label class="skill-checkbox-card" for="skill-hausmeister">
+                                        <input type="checkbox" id="skill-hausmeister" name="kompetenzen" value="Hausmeisterservice & Liegenschaftspflege">
+                                        <div class="skill-checkbox-indicator">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div class="skill-checkbox-text">
+                                            <span class="skill-checkbox-title">Hausmeisterservice & Außenpflege</span>
+                                            <span class="skill-checkbox-desc">Kleinreparaturen, Leuchtmittel, Mülltonnendienst</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Block 4: Feld Sprachen -->
+                            <div class="career-form-section">
+                                <div class="form-section-header">
+                                    <div class="form-section-number">4</div>
+                                    <div>
+                                        <h3 class="form-section-title">Sprachkenntnisse</h3>
+                                        <p class="form-section-subtitle">Welche Sprachen sprechen Sie im Alltag?</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="career-sprachen">Sprachen <span class="req">*</span></label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="career-sprachen" 
+                                        name="sprachen" 
+                                        placeholder="z. B. Deutsch (gut), Englisch (Grundkenntnisse)" 
+                                        required
+                                    >
+                                    <div class="language-quick-chips">
+                                        <span style="font-size: 0.8rem; color: var(--color-text-muted); margin-right: 0.25rem;">Häufige Sprachen (klicken zum Hinzufügen):</span>
+                                        <button type="button" class="lang-chip" data-lang="Deutsch (fließend)">+ Deutsch (fließend)</button>
+                                        <button type="button" class="lang-chip" data-lang="Deutsch (Grundkenntnisse)">+ Deutsch (Grundkenntnisse)</button>
+                                        <button type="button" class="lang-chip" data-lang="Englisch">+ Englisch</button>
+                                        <button type="button" class="lang-chip" data-lang="Französisch">+ Französisch</button>
+                                        <button type="button" class="lang-chip" data-lang="Türkisch">+ Türkisch</button>
+                                        <button type="button" class="lang-chip" data-lang="Ukrainisch">+ Ukrainisch</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Block 5: Feld Beschreibung -->
+                            <div class="career-form-section">
+                                <div class="form-section-header">
+                                    <div class="form-section-number">5</div>
+                                    <div>
+                                        <h3 class="form-section-title">Beschreibung, Erfahrungen & Besonderheiten</h3>
+                                        <p class="form-section-subtitle">Erzählen Sie uns kurz von sich und Ihrer Motivation</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label class="form-label" for="career-beschreibung">Beschreibung Ihrer Erfahrungen & Stärken</label>
+                                    <textarea 
+                                        class="form-control" 
+                                        id="career-beschreibung" 
+                                        name="beschreibung" 
+                                        rows="4" 
+                                        placeholder="Haben Sie bereits in der Gebäudereinigung gearbeitet? Welche Aufgaben liegen Ihnen besonders? An welchen Tagen oder Uhrzeiten sind Sie verfügbar? Gibt es weitere Qualifikationen?"
+                                    ></textarea>
+                                </div>
+
+                                <div class="form-group full-width" style="margin-top: 1rem;">
+                                    <p class="form-privacy">
+                                        Ihre Daten werden streng vertraulich und ausschließlich für die Bearbeitung Ihrer Initiativbewerbung verwendet. Nähere Informationen finden Sie in unserer <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Sende-Buttons: EmailJS & WhatsApp -->
+                            <div class="form-group full-width" style="margin-top: 1rem;">
+                                <p style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); margin-bottom: 0.75rem; text-align: center; letter-spacing: 0.05em; text-transform: uppercase;">
+                                    Wie möchten Sie die Bewerbung senden?
+                                </p>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+                                    <!-- EmailJS Button -->
+                                    <button type="submit" id="career-btn-send-email" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                        Bewerbung jetzt absenden
+                                    </button>
+
+                                    <!-- WhatsApp Button -->
+                                    <button type="button" id="career-btn-send-whatsapp" class="btn btn-lg" style="width: 100%; justify-content: center; background: #25D366; color: #fff; border: none; border-radius: var(--radius-md); cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1rem; padding: 0.75rem 1.25rem; transition: background 0.2s;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                                        </svg>
+                                        Via WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps / Wie geht es weiter? -->
+        <section class="section-spacing" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border-subtle);">
+            <div class="container">
+                <div class="section-header" style="margin: 0 auto 1.5rem; text-align: center;">
+                    <div class="badge" style="margin-bottom: 0.75rem;">
+                        <span class="badge-dot"></span>
+                        Bewerbungsablauf
+                    </div>
+                    <h2>In 4 Schritten zu Ihrem neuen Arbeitsplatz</h2>
+                    <p>Transparent, schnell und unkompliziert – so läuft der Prozess bei uns ab.</p>
+                </div>
+
+                <div class="career-process-grid">
+                    <div class="career-process-card">
+                        <div class="career-process-step">01</div>
+                        <h3>Formular absenden</h3>
+                        <p>Tragen Sie Ihre Kontaktdaten, Kompetenzen und Sprachen in das Formular oben ein und senden Sie es ab.</p>
+                    </div>
+
+                    <div class="career-process-card">
+                        <div class="career-process-step">02</div>
+                        <h3>Kurzes Telefonat</h3>
+                        <p>Wir melden uns in der Regel innerhalb von 24–48 Stunden telefonisch für einen ersten kurzen Austausch.</p>
+                    </div>
+
+                    <div class="career-process-card">
+                        <div class="career-process-step">03</div>
+                        <h3>Kennenlernen vor Ort</h3>
+                        <p>Bei einem entspannten Treffen in Rechberghausen lernen wir uns kennen und besprechen konkrete Einsatzmöglichkeiten.</p>
+                    </div>
+
+                    <div class="career-process-card">
+                        <div class="career-process-step">04</div>
+                        <h3>Start im Team</h3>
+                        <p>Herzlich willkommen! Sie erhalten eine ausführliche Einarbeitung, Arbeitskleidung und starten in Ihre neue Aufgabe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for Applicants -->
+        <section class="section-spacing">
+            <div class="container" style="max-width: 860px;">
+                <div class="section-header" style="margin: 0 auto 2.5rem; text-align: center;">
+                    <div class="badge" style="margin-bottom: 0.75rem;">
+                        <span class="badge-dot"></span>
+                        Häufige Fragen
+                    </div>
+                    <h2>Häufig gestellte Fragen von Bewerbern</h2>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="background: #FFFFFF; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-xs);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--color-text-primary);">Brauche ich zwingend Vorerfahrung in der Reinigung?</h3>
+                        <p style="margin: 0; font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Nein. Erfahrung ist zwar ein großes Plus, aber auch motivierte Quereinsteiger mit Sinn für Ordnung, Gründlichkeit und Zuverlässigkeit sind bei uns herzlich willkommen. Wir arbeiten Sie umfassend ein.
+                        </p>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-xs);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--color-text-primary);">Welche Arbeitszeiten gibt es?</h3>
+                        <p style="margin: 0; font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Wir betreuen unterschiedliche Kunden (Büros, Praxen, Wohnhäuser, Schulen). Je nach Objekt gibt es Einsätze am frühen Morgen, tagsüber oder in den frühen Abendstunden. Gemeinsam finden wir den Zeitrahmen, der zu Ihrem Leben passt.
+                        </p>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-xs);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--color-text-primary);">Ist ein PKW-Führerschein zwingend erforderlich?</h3>
+                        <p style="margin: 0; font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Ein Führerschein der Klasse B ist von Vorteil, aber nicht für jedes Objekt zwingend notwendig. Viele Einsatzorte in Rechberghausen oder Göppingen sind auch mit öffentlichen Verkehrsmitteln oder dem Fahrrad gut erreichbar.
+                        </p>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-xs);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--color-text-primary);">Wie schnell erhalte ich eine Rückmeldung?</h3>
+                        <p style="margin: 0; font-size: 0.925rem; color: var(--color-text-secondary); line-height: 1.6;">
+                            Sehr schnell! Unser Team sichtet jede Bewerbung sorgfältig und meldet sich im Regelfall innerhalb von 24 bis maximal 48 Stunden telefonisch oder per E-Mail bei Ihnen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" aria-label="CLOVIS Gebäudereinigung Startseite">
+                        <img src="assets/pictures/logo.png" alt="CLOVIS Gebäudereinigung Logo" class="logo-img">
+                    </a>
+                    <p>
+                        Ihr erfahrener und zuverlässiger Fachbetrieb für Gebäudereinigung, Bürohygiene, Glasreinigung und Liegenschaftsservice. Sauberkeit mit Präzision.
+                    </p>
+                    <div style="font-size: 0.85rem; color: #7D7871;">
+                        © 2026 CLOVIS Gebäudereinigung. Alle Rechte vorbehalten.
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="dienste.html">Unsere Dienste</a></li>
+                        <li><a href="karriere.html">Karriere / Bewerbung</a></li>
+                        <li><a href="galerie.html">Galerie & Einblicke</a></li>
+                        <li><a href="kontakt.html">Kontakt & Anfahrt</a></li>
+                        <li><a href="kontakt.html">Angebot anfragen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Dienstleistungen</h3>
+                    <ul class="footer-links">
+                        <li><a href="dienste.html#gebaeudereinigung">Gebäudereinigung</a></li>
+                        <li><a href="dienste.html#fensterreinigung">Fensterreinigung</a></li>
+                        <li><a href="dienste.html#bueroreinigung">Büroreinigung</a></li>
+                        <li><a href="dienste.html#grundreinigung">Grundreinigung</a></li>
+                        <li><a href="dienste.html#hausmeisterservice">Hausmeisterservice</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Direktkontakt</h3>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Messelbergstraße 4<br>73098 Rechberghausen</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+49 (0) 7161 9666659</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>proklarglasreinigung@outlook.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    Zertifizierter Fachbetrieb nach deutschen Qualitäts- und Umweltstandards.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    <a href="agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="whatsapp-float-btn"
+       href="https://wa.me/4917665838189"
+       target="_blank"
+       rel="noopener"
+       aria-label="WhatsApp Kontakt"
+       title="Auf WhatsApp schreiben"
+       style="
+           position: fixed;
+           bottom: 28px;
+           right: 28px;
+           width: 60px;
+           height: 60px;
+           background: linear-gradient(135deg, #25D366, #128C7E);
+           border-radius: 50%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.18);
+           z-index: 9999;
+           transition: transform 0.22s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s;
+           text-decoration: none;
+           animation: wa-pulse 2.8s ease-in-out infinite;
+       "
+    >
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+    <style>
+        @keyframes wa-pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.18); }
+            50% { box-shadow: 0 4px 28px rgba(37,211,102,0.75), 0 2px 12px rgba(0,0,0,0.22); }
+            50% { box-shadow: 0 4px 28px rgba(37,211,102,0.75), 0 2px 12px rgba(0,0,0,0.22); }
+        }
+        #whatsapp-float-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 8px 32px rgba(37,211,102,0.6), 0 4px 14px rgba(0,0,0,0.22) !important;
+        }
+    </style>
+
+</body>
+</html>
