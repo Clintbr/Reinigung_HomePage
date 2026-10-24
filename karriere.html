@@ -285,7 +285,7 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
                         </div>
                         <h3>Flexible Arbeitsmodelle</h3>
-                        <p>Ob Vollzeit, Teilzeit oder Minijob (538 €) – wir stimmen Arbeitszeiten und Objekte bestmöglich auf Ihren Alltag ab.</p>
+                        <p>Wir stimmen Arbeitszeiten und Objekte bestmöglich auf Ihren Alltag ab.</p>
                     </div>
                 </div>
             </div>
@@ -327,7 +327,7 @@
                             <div>
                                 <strong style="font-size: 1.05rem;">Übertragung fehlgeschlagen!</strong>
                                 <p style="font-size: 0.925rem; margin-top: 0.2rem;" class="error-msg-text">
-                                    Es gab ein technisches Problem beim Senden. Bitte versuchen Sie es erneut oder bewerben Sie sich direkt via WhatsApp oder telefonisch unter +49 (0) 7161 9666659.
+                                    Es gab ein technisches Problem beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt per E-Mail an info@proklar-reinigung.de oder rufen Sie uns an unter +49 (0) 7161 9666659.
                                 </p>
                             </div>
                         </div>
@@ -345,9 +345,14 @@
                                 </div>
 
                                 <div class="form-grid">
-                                    <div class="form-group full-width">
-                                        <label class="form-label" for="career-name">Vor- und Nachname <span class="req">*</span></label>
-                                        <input type="text" class="form-control" id="career-name" name="name" placeholder="z. B. Maria Musterfrau" required autocomplete="name">
+                                    <div class="form-group">
+                                        <label class="form-label" for="career-vorname">Vorname <span class="req">*</span></label>
+                                        <input type="text" class="form-control" id="career-vorname" name="vorname" placeholder="z. B. Maria" required autocomplete="given-name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="career-nachname">Nachname <span class="req">*</span></label>
+                                        <input type="text" class="form-control" id="career-nachname" name="nachname" placeholder="z. B. Musterfrau" required autocomplete="family-name">
                                     </div>
 
                                     <div class="form-group full-width">
@@ -408,8 +413,8 @@
                                                 <span>Teilzeit</span>
                                             </label> -->
                                             <label class="career-radio-chip">
-                                                <input type="radio" name="verfuegbarkeit" value="Minijob (538 €)">
-                                                <span>Minijob (538 €)</span>
+                                                <input type="radio" name="verfuegbarkeit" value="Minijob (603 €)">
+                                                <span>Minijob (603 €)</span>
                                             </label>
                                             <label class="career-radio-chip">
                                                 <input type="radio" name="verfuegbarkeit" value="Aushilfe / Flexibel">
@@ -434,7 +439,7 @@
 
                                     <div class="form-group">
                                         <label class="form-label" for="career-start">Möglicher Arbeitsbeginn</label>
-                                        <input type="text" class="form-control" id="career-start" name="starttermin" placeholder="z. B. Ab sofort / zum 01. des Monats">
+                                        <input type="date" class="form-control" id="career-start" name="starttermin">
                                     </div>
                                 </div>
                             </div>
@@ -570,12 +575,15 @@
                                     >
                                     <div class="language-quick-chips">
                                         <span style="font-size: 0.8rem; color: var(--color-text-muted); margin-right: 0.25rem;">Häufige Sprachen (klicken zum Hinzufügen):</span>
+                                        <button type="button" class="lang-chip" data-lang="Deutsch (Muttersprache)">+ Deutsch (Muttersprache)</button>
                                         <button type="button" class="lang-chip" data-lang="Deutsch (fließend)">+ Deutsch (fließend)</button>
                                         <button type="button" class="lang-chip" data-lang="Deutsch (Grundkenntnisse)">+ Deutsch (Grundkenntnisse)</button>
-                                        <button type="button" class="lang-chip" data-lang="Englisch">+ Englisch</button>
-                                        <button type="button" class="lang-chip" data-lang="Französisch">+ Französisch</button>
-                                        <button type="button" class="lang-chip" data-lang="Türkisch">+ Türkisch</button>
-                                        <button type="button" class="lang-chip" data-lang="Ukrainisch">+ Ukrainisch</button>
+                                        <button type="button" class="lang-chip" data-lang="Englisch (sehr gut)">+ Englisch (sehr gut)</button>
+                                        <button type="button" class="lang-chip" data-lang="Englisch (gut)">+ Englisch (gut)</button>
+                                        <button type="button" class="lang-chip" data-lang="Englisch (basic)">+ Englisch (basic)</button>
+                                        <button type="button" class="lang-chip" data-lang="Französisch (sehr gut)">+ Französisch (sehr gut)</button>
+                                        <button type="button" class="lang-chip" data-lang="Französisch (gut)">+ Französisch (gut)</button>
+                                        <button type="button" class="lang-chip" data-lang="Französisch (basic)">+ Französisch (basic)</button>
                                     </div>
                                 </div>
                             </div>
@@ -597,7 +605,7 @@
                                         id="career-beschreibung" 
                                         name="beschreibung" 
                                         rows="4" 
-                                        placeholder="Haben Sie bereits in der Gebäudereinigung gearbeitet? Welche Aufgaben liegen Ihnen besonders? An welchen Tagen oder Uhrzeiten sind Sie verfügbar? Gibt es weitere Qualifikationen?"
+                                        placeholder=""
                                     ></textarea>
                                 </div>
 
@@ -608,26 +616,12 @@
                                 </div>
                             </div>
 
-                            <!-- Sende-Buttons: EmailJS & WhatsApp -->
+                            <!-- Sende-Button: E-Mail -->
                             <div class="form-group full-width" style="margin-top: 1rem;">
-                                <p style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); margin-bottom: 0.75rem; text-align: center; letter-spacing: 0.05em; text-transform: uppercase;">
-                                    Wie möchten Sie die Bewerbung senden?
-                                </p>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
-                                    <!-- EmailJS Button -->
-                                    <button type="submit" id="career-btn-send-email" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                        Bewerbung jetzt absenden
-                                    </button>
-
-                                    <!-- WhatsApp Button -->
-                                    <button type="button" id="career-btn-send-whatsapp" class="btn btn-lg" style="width: 100%; justify-content: center; background: #25D366; color: #fff; border: none; border-radius: var(--radius-md); cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1rem; padding: 0.75rem 1.25rem; transition: background 0.2s;">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                                        </svg>
-                                        Via WhatsApp
-                                    </button>
-                                </div>
+                                <button type="submit" id="career-btn-send-email" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    Bewerbung jetzt absenden
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -670,7 +664,7 @@
                     <div class="career-process-card">
                         <div class="career-process-step">04</div>
                         <h3>Start im Team</h3>
-                        <p>Herzlich willkommen! Sie erhalten eine ausführliche Einarbeitung, Arbeitskleidung und starten in Ihre neue Aufgabe.</p>
+                        <p>Herzlich willkommen! Sie erhalten eine ausführliche Einarbeitung und starten in Ihre neue Aufgabe.</p>
                     </div>
                 </div>
             </div>

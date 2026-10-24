@@ -703,36 +703,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // WhatsApp Schnellbewerbung
-        const careerWaBtn = document.getElementById('career-btn-send-whatsapp');
-        if (careerWaBtn) {
-            careerWaBtn.addEventListener('click', () => {
-                const name = careerForm.querySelector('[name="name"]')?.value?.trim() || '';
-                const tel = careerForm.querySelector('[name="telefon"]')?.value?.trim() || '';
-                const email = careerForm.querySelector('[name="email"]')?.value?.trim() || '';
-                const wohnort = careerForm.querySelector('[name="wohnort"]')?.value?.trim() || '';
-                const verfuegbarkeit = careerForm.querySelector('[name="verfuegbarkeit"]')?.value || '';
-                const sprachen = careerForm.querySelector('[name="sprachen"]')?.value?.trim() || '';
-                const userNotes = careerForm.querySelector('textarea[name="beschreibung"]')?.value?.trim() || '';
-
-                const checkedSkills = Array.from(careerForm.querySelectorAll('input[name="kompetenzen"]:checked'))
-                    .map(cb => cb.value);
-
-                let msg = 'Hallo CLOVIS Gebäudereinigung,\nich möchte mich gerne initiativ bei Ihnen bewerben!';
-                if (name) msg += `\n\nName: ${name}`;
-                if (tel) msg += `\nTelefon: ${tel}`;
-                if (email) msg += `\nE-Mail: ${email}`;
-                if (wohnort) msg += `\nWohnort / PLZ: ${wohnort}`;
-                if (verfuegbarkeit) msg += `\nAnstellung: ${verfuegbarkeit}`;
-                if (checkedSkills.length > 0) {
-                    msg += `\n\nKompetenzen:\n${checkedSkills.map(s => `- ${s}`).join('\n')}`;
-                }
-                if (sprachen) msg += `\n\nSprachen: ${sprachen}`;
-                if (userNotes) msg += `\n\nÜber mich:\n${userNotes}`;
-
-                const waUrl = `https://wa.me/4917665838189?text=${encodeURIComponent(msg)}`;
-                window.open(waUrl, '_blank', 'noopener');
-            });
-        }
     }
 });
