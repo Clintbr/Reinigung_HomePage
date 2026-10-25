@@ -4123,6 +4123,318 @@ textarea.form-control {
     margin: 0;
 }
 
+/* =========================================================
+   BEWERTUNG (REVIEW) MODAL & CARD STYLES
+========================================================= */
+.review-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.review-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.review-modal-container {
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    transform: scale(0.92) translateY(12px);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    margin: auto;
+}
+
+.review-modal-backdrop.active .review-modal-container {
+    transform: scale(1) translateY(0);
+}
+
+.review-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    backdrop-filter: blur(6px);
+    transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.review-modal-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.08);
+    color: #ffffff;
+}
+
+.review-modal-close:active {
+    transform: scale(0.95);
+}
+
+/* Review CTA Card */
+.review-cta-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.cta-card-header {
+    background: linear-gradient(135deg, var(--color-blue-700, #1D4ED8) 0%, var(--color-blue-500, #2563EB) 100%);
+    padding: 2.25rem 1.75rem 1.75rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card-header::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.cta-card-header::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+}
+
+.google-logo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: var(--radius-full, 9999px);
+    padding: 0.35rem 0.9rem;
+    margin-bottom: 1.15rem;
+    backdrop-filter: blur(8px);
+}
+
+.google-logo-badge svg {
+    width: 18px;
+    height: 18px;
+}
+
+.google-logo-badge span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.02em;
+}
+
+.cta-card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin-bottom: 0.65rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-card-header p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.55;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+/* Interactive Stars */
+.cta-card-body {
+    padding: 1.75rem;
+}
+
+.star-rating-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: 0.85rem;
+}
+
+.interactive-stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-bottom: 0.65rem;
+}
+
+.interactive-stars .star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    transition: transform 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interactive-stars .star-btn:hover {
+    transform: scale(1.18);
+}
+
+.interactive-stars .star-btn svg {
+    width: 38px;
+    height: 38px;
+    fill: #E5E7EB;
+    transition: fill 0.15s ease, transform 0.15s ease;
+}
+
+.interactive-stars .star-btn.active svg,
+.interactive-stars .star-btn.hovered svg {
+    fill: #F59E0B;
+}
+
+.star-rating-feedback {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    min-height: 1.4em;
+    margin-bottom: 1.25rem;
+    transition: all 0.15s ease;
+}
+
+/* Divider */
+.divider-text {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border-subtle);
+}
+
+.divider-text span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+/* Google Review Button */
+.btn-google-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.95rem 1.4rem;
+    background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 50%, #3B82F6 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-google-review:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.45);
+    color: #ffffff;
+}
+
+.btn-google-review:active {
+    transform: translateY(0);
+}
+
+.btn-google-review svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Trust signals */
+.trust-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+}
+
+.trust-row svg {
+    width: 14px;
+    height: 14px;
+    color: #22C55E;
+    flex-shrink: 0;
+}
+
+.trust-row span {
+    font-size: 0.76rem;
+    color: var(--color-text-muted);
+}
+
+/* Confetti particles */
+@keyframes confetti-fall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(300px) rotate(720deg); opacity: 0; }
+}
+
+.confetti-particle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    pointer-events: none;
+    animation: confetti-fall 1.2s ease-in forwards;
+    z-index: 9999;
+}
+
+
 
 
 

@@ -704,4 +704,150 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+
+    // 11. Bewertung (Google Review) Modal & Stars Initialisierung
+    initReviewModal();
+
+    function initReviewModal() {
+        const modal = document.getElementById('review-modal');
+        if (!modal) return;
+
+        const closeBtn = document.getElementById('review-modal-close');
+        const starBtns = modal.querySelectorAll('#star-rating .star-btn');
+        const feedback = document.getElementById('star-feedback');
+        const reviewBtn = modal.querySelector('#btn-google-review');
+        const card = document.getElementById('bewertung-card');
+
+        const labels = {
+            1: 'Schlecht — wir möchten es besser machen.',
+            2: 'Ausbaufähig — Ihr Feedback hilft uns!',
+            3: 'In Ordnung — danke für Ihre Ehrlichkeit.',
+            4: 'Gut — wir sind fast perfekt für Sie!',
+            5: 'Ausgezeichnet! Vielen herzlichen Dank!'
+        };
+
+        let selectedRating = 0;
+
+        function openModal() {
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Close mobile nav drawer if open
+            if (mobileDrawer?.classList.contains('active')) {
+                closeDrawer();
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+
+            // Clean up hash if #bewertung is present
+            if (window.location.hash === '#bewertung' || window.location.hash === '#bewertung-modal') {
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        }
+
+        // Trigger clicks for any button or link opening review modal
+        document.querySelectorAll('[data-open-review-modal], a[href="#bewertung"], a[href="#bewertung-modal"]').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+
+        closeBtn?.addEventListener('click', closeModal);
+
+        // Click outside modal container closes it
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // ESC key closes modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Check hash on load & on hashchange
+        function checkHash() {
+            if (window.location.hash === '#bewertung' || window.location.hash === '#bewertung-modal') {
+                openModal();
+            }
+        }
+        checkHash();
+        window.addEventListener('hashchange', checkHash);
+
+        // Star Rating Logic
+        function updateStars(hoveredValue, selectedValue) {
+            starBtns.forEach(btn => {
+                const v = parseInt(btn.dataset.value, 10);
+                btn.classList.remove('active', 'hovered');
+                if (v <= selectedValue) {
+                    btn.classList.add('active');
+                } else if (hoveredValue && v <= hoveredValue) {
+                    btn.classList.add('hovered');
+                }
+            });
+        }
+
+        starBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                const v = parseInt(btn.dataset.value, 10);
+                updateStars(v, selectedRating);
+                if (feedback) feedback.textContent = labels[v];
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                updateStars(0, selectedRating);
+                if (feedback) {
+                    feedback.textContent = selectedRating
+                        ? labels[selectedRating]
+                        : 'Wählen Sie Ihre Bewertung ↑';
+                }
+            });
+
+            btn.addEventListener('click', () => {
+                selectedRating = parseInt(btn.dataset.value, 10);
+                updateStars(0, selectedRating);
+                if (feedback) feedback.textContent = labels[selectedRating];
+
+                if (card) {
+                    card.style.transform = 'scale(1.02)';
+                    setTimeout(() => { card.style.transform = ''; }, 200);
+                }
+
+                if (selectedRating === 5 && reviewBtn) {
+                    launchConfetti(reviewBtn);
+                }
+            });
+        });
+
+        function launchConfetti(anchor) {
+            const colors = ['#2563EB', '#F59E0B', '#10B981', '#EF4444', '#8B5CF6', '#F97316'];
+            const rect = anchor.getBoundingClientRect();
+            for (let i = 0; i < 24; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'confetti-particle';
+                particle.style.left = (rect.left + rect.width / 2 + (Math.random() - 0.5) * 220) + 'px';
+                particle.style.top = (rect.top - 10) + 'px';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.animationDelay = (Math.random() * 0.4) + 's';
+                particle.style.animationDuration = (0.9 + Math.random() * 0.6) + 's';
+                particle.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                document.body.appendChild(particle);
+                setTimeout(() => { particle.remove(); }, 1800);
+            }
+        }
+
+        reviewBtn?.addEventListener('click', () => {
+            reviewBtn.style.transform = 'scale(0.97)';
+            setTimeout(() => { reviewBtn.style.transform = ''; }, 150);
+        });
+    }
 });
