@@ -10,6 +10,8 @@ export const EMAILJS_CONFIG = {
     TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ''
 };
 
+console.log(EMAILJS_CONFIG.PUBLIC_KEY)
+
 // Initialisiere EmailJS SDK falls vorhanden
 if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.PUBLIC_KEY) {
     emailjs.init({
