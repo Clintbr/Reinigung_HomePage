@@ -1,3 +1,29 @@
 [build]
   publish = "dist"
   command = "npm run build"
+
+# Redirect www to apex domain https://proklar360.de
+[[redirects]]
+  from = "https://www.proklar360.de/*"
+  to = "https://proklar360.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.proklar360.de/*"
+  to = "https://proklar360.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://proklar360.de/*"
+  to = "https://proklar360.de/:splat"
+  status = 301
+  force = true
+
+# Redirect index.html to /
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
