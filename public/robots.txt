@@ -4,4 +4,7 @@ Disallow: /includes/
 User-agent: Googlebot
 Allow: /includes/
 
+User-agent: OAI-SearchBot
+Allow: /includes/
+
 Sitemap: https://example.com/sitemap.xml
