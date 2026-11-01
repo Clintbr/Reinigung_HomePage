@@ -1,4 +1,7 @@
 User-agent: *
-Allow: /
+Disallow: /includes/
 
-Sitemap: https://proklar360.de/sitemap.xml
+User-agent: Googlebot
+Allow: /includes/
+
+Sitemap: https://example.com/sitemap.xml
